@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: #eae9e8;
+}
+
+.header-menu{
+    background-color: #4070f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header-menu .logo-menu{
+    cursor: pointer;
+}
+
+.header-menu .logo-menu img{
+    height: 35px;
+    width: auto;
+    transition: all 0.3s;
+    
+}
+
+.header-menu .logo-menu img:hover{
+    transform: scale(1.2);
+}
+
+.header-menu .nav-links-menu{
+    list-style: none;
+}
+
+.header-menu .nav-links-menu li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.header-menu .nav-links-menu li:hover{
+    transform: scale(1.1);
+}
+
+.header-menu .nav-links-menu a{
+    font-weight: 700;
+    color: #eceff1;
+    text-decoration: none;    
+}
+
+.header-menu .nav-links-menu li a:hover{
+    color: #040404;
+}
+
+.header-menu .btn-menu button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header-menu .btn-menu button:hover{
+    background-color: #000000;
+    color: #fbfbfb;
+    transform: scale(1.1);
+}
+
+/* parte de las imagenes y el texto de ellas */
+.offer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 1rem;
+  max-width: 1100px; /* Ajusta el ancho máximo para mantener el diseño */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+.offer__image {
+  flex: 1; /* Permite que la imagen ocupe el espacio restante */
+  max-width: 4000px; /* Establece un ancho máximo para las imágenes */
+}
+
+.offer__image img {
+  width: 100%; /* Ajusta la imagen para que ocupe todo el contenedor */
+  height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.offer__content {
+  flex: 1; /* Permite que el contenido ocupe el espacio restante */
+  max-width: 500px; /* Limita el ancho del contenido */
+  margin-left: 2rem; /* Ajusta el espacio entre la imagen y el contenido */
+}
+
+  
+  .offer__content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: var(--header-font);
+    letter-spacing: 3px;
+    color: var(--primary-color-light);
+  }
+  
+  .offer__content h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: var(--header-font);
+    line-height: 3rem;
+  }
+  
+  .offer__content p {
+    margin-block: 1rem;
+    color: var(--text-light);
+  }
+  
+  .offer__content h5 {
+    margin-top: 1rem;
+  }
+  
+  .offer__ratings {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .offer__btn {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .offer__btn .btn {
+    margin-right: 1rem;
+  }
+  
+  .offer__btn h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+  }
+  
+  /* pie de pagina */
+  
+  
+  .footer {
+    position: relative;
+    width: 100%;
+    background: #286bcf;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: rgb(17, 17, 17);
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+
+/* Nuevos estilos para las modificaciones */  
+.nav-links-menu li:hover {
+  background-color: #7b9fff; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
+.nav-links-menu li a:hover {
+  cursor: pointer; /* Cambia el cursor al pasar sobre los enlaces */
+}
+
+.menu-icon:hover {
+  opacity: 1; /* Cambia la opacidad al pasar el cursor */
+}
+
+.menu-icon {
+  cursor: pointer; /* Cambia el cursor al pasar sobre los enlaces */
+}
+
+.menu-icon {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.text {
+  color: #eee8e8;
+}
+
+
+.shadow-effect {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #007bff; /* Color base del botón */
+  transition: box-shadow 0.3s ease-in-out; /* Transición suave del efecto de sombra */
+}
+
+.shadow-effect:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta el desplazamiento y la opacidad de la sombra */
+}
