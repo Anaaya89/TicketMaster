@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='Imagenes/TicketCenterN.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}Inicio de Sesion{% endblock %}</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="static\Imagenes/TicketCenterN.png">
+            <a href="/Inicio">TicketsCenter</a>
+        </div>
+        <ul>
+            <li><a href="/Inicio">Inicio</a></li>
+            <li><a href="ComprarCine.jsp">Cine</a></li>
+            <li><a href="ComprarTeatro.jsp">Teatro</a></li>
+            <li><a href="ComprarMuseo.jsp">Museo</a></li>
+        </ul>
+        <form>
+            <button type="submit" formaction="/Login">
+                Iniciar Sesión
+            </button>
+        </form>
+    </nav>
+
+    <div class="container" id="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="static\Imagenes/TicketCenterN.png">
+                <a href="static\Lobby.jsp">TicketCenter</a>
+            </div>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cine</a></li>
+                <li><a href="#">Teatro</a></li>
+                <li><a href="#">Museo</a></li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="bottom">
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies Setting</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='Validaciones.js') }}"></script>
+</body>
+
+</html>

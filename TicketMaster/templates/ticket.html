@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de Compra</title>
+</head>
+<body>
+    <h1>Ticket de Compra</h1>
+    <p><strong>Cine:</strong> {{ cine }}</p>
+    <p><strong>Película:</strong> {{ pelicula }}</p>
+    <p><strong>Tipo de Asiento:</strong> {{ tipo_asiento }}</p>
+    <p><strong>Cantidad de Boletos:</strong> {{ cantidad_boletos }}</p>
+    <p><strong>Costo Total:</strong> ${{ costo_total }}</p>
+
+    <h1>Metodo de Pago - Tarjeta de credito</h1>
+    <p><strong>Numero de Tarjeta:</strong> {{ numtarjeta }}</p>
+    <p><strong>Nombre del propietario de la tarjeta:</strong> {{ nombre_tarjeta }}</p>
+    <p><strong>Fecha de expiracion:</strong> {{ FechaExpiracion }}</p>
+    <p><strong>Codigo de seguridad:</strong> {{ codigo_seguridad }}</p>
+    <a href="{{ url_for('generar_pdf', cine=cine, pelicula=pelicula, tipo_asiento=tipo_asiento, cantidad_boletos=cantidad_boletos, costo_total=costo_total, numtarjeta=numtarjeta, nombre_tarjeta=nombre_tarjeta, FechaExpiracion=FechaExpiracion, codigo_seguridad=codigo_seguridad) }}">Generar PDF</a>
+</body>
+</html>

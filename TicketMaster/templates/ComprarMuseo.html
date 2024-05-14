@@ -1,0 +1,43 @@
+<html lang="ES">
+<head>
+    <link rel="shortcut icon" href="Imagenes/TicketCenterN.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Comprar Boletos</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div>
+            <form action="#">
+                <h1>Comprar boletos - Museo</h1>
+
+                <h5>Lugar:</h5>
+                <select name="museo" id="museo">
+                    <option value="Museo de Louvre París">Museo de Louvre París</option>
+                    <option value="Museo Metropolitano de Nueva York">Museo Metropolitano de Nueva York</option>
+                    <option value="Museo Vaticano">Museo Vaticano</option>
+                    <option value="Museo Nacional de Antropología, Ciudad de México">Museo Nacional de Antropología, Ciudad de México</option>
+                    <option value="Museu Nacional d Art de Catalunya">Museu Nacional d&#39;Art de Catalunya</option>
+                </select>
+                <h5>Fecha:</h5>
+                <input type="date" name="fecha" required>
+                <h5>Cantidad de Boletos:</h5>
+                <select name="cantBoleto" id="cantBoleto">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button>Comprar</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

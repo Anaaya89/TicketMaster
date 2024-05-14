@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <link rel="shortcut icon" href="static\Imagenes/TicketCenterN.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="static\styleLobby.css">
+    <title>{% block title %}Inicio{% endblock %}</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="static\Imagenes/TicketCenterN.png">
+            <a href="/Inicio">TicketsCenter</a>
+        </div>
+        <ul>
+            <li><a href="/Inicio">Inicio</a></li>
+            <li><a href="/Cine">Cine</a></li>
+            <li><a href="ComprarTeatro.jsp">Teatro</a></li>
+            <li><a href="ComprarMuseo.jsp">Museo</a></li>
+            {% if session.username %}
+            <a>{{ session.username }}</a>
+        </ul>
+            <a href="/logout">Cerrar sesión</a>
+        {% else %}
+    </ul>
+            <form>
+                <button type="submit" formaction="/Login">
+                    Iniciar Sesión
+                </button>
+            </form>
+        {% endif %}
+    </nav>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="static\Imagenes/TicketCenterN.png">
+                <a href="static\Lobby.jsp">TicketCenter</a>
+            </div>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cine</a></li>
+                <li><a href="#">Teatro</a></li>
+                <li><a href="#">Museo</a></li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="bottom">
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies Setting</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static\scriptLobby.js"></script>
+    <script src="static\script.js"></script>
+    <script src="static\Validaciones.js"></script>
+</body>
+
+</html>

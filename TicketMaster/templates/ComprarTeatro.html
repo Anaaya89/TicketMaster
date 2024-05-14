@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sidebar</title>
+        <link rel="stylesheet" href="\static\slider\style.css">
+    </head>
+    <body>
+        <div class="menu">
+            <ion-icon name="menu-outline"></ion-icon>
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+
+        <div class="barra-lateral">
+            <nav class="navegacion">
+                <div class="container" id="container">
+                    <div>
+                        <form action="/ticket" method="GET">
+                            <h1 style="margin-top: 10px;">Comprar boletos</h1>
+                            <h2>Teatro</h2>
+
+                            <h5>Lugar:</h5>
+                            <select name="cine" id="cine">
+                                <option value="Cinemark">Teatro Colon Buenos Aires</option>
+                                <option value="Cinepolis">Teatro de la Scala Milan</option>
+                                <option value="Cinemex">Teatro Metropolitan, Ciudad de Mexico</option>
+                            </select>
+
+                            <h5>Funcion:</h5>
+                            <select name="pelicula" id="pelicula">
+                            </select>
+                            <h5>Tipo de asiento:</h5>
+                            <select name="asiento" id="asiento">
+                                <option value="50">Luneta</option>
+                                <option value="100">Palco</option>
+                            </select>
+                            <h5>Cantidad de Boletos:</h5>
+                            <input type="number" id="cantBoleto"
+                                name="boleto" min="1" max="10" value="0"
+                                readonly>
+                            <h5>Total:</h5>
+                            <input type="number" id="Costototal"
+                                name="Costototal" value="0"
+                                readonly>
+                            <h1>Metodo de Pago</h1>
+                            <h5>Tarjeta de Credito</h5>
+                            <input type="text" name="numtarjeta"
+                                id="numtarjeta">
+                            <h5>Nombre en la Tarjeta</h5>
+                            <input type="text" name="nombre_tarjeta"
+                                id="nombre_tarjeta">
+                            <h5>Fecha de Expiracion</h5>
+                            <input type="month" name="FechaExpiracion"
+                                id="FechaExpiracion">
+                            <h5>Codigo de seguridad</h5>
+                            <input type="text" name="codigo_seguridad"
+                                id="codigo_seguridad">
+                            <button style="margin-bottom: 20px;"
+                                type="submit">Comprar</button>
+                        </form>
+                        <div class="usuario">
+                            <div class="info-usuario"
+                                style="padding-bottom: 100px;">
+                                <div class="nombre-email">
+                                    <span class="nombre">{{
+                                        session.get('username') }}</span>
+                                    <span class="email">{{ session.get('email')
+                                        }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+
+            <main>
+
+                <div class="container2">
+                    <div class="container1">
+                        <div class="funciones-header">
+                            <h1>Funciones</h1>
+                        </div>
+                        <div class="movies" style="margin-top: 62px;">
+                            <h5>Teatro Colon Buenos Aires</h5>
+                            <div>
+                                <h5>LULI PAMPIN</h5>
+                                <img
+                                    src="\static\Imagenes\luli.jpg"
+                                    alt>
+                            </div>
+                            <div>
+                                <h5>TEMPORADA DE PATOS</h5>
+                                <img
+                                    src="\static\Imagenes\temporadapatos.jpg"
+                                    alt>
+                            </div>
+                            <div>
+                                <h5>VEINTIDÓS VEINTIDÓS DE ODIN DUPEYRON</h5>
+                                <img src="\static\Imagenes\veintidos.jpg"
+                                    alt>
+                            </div>
+                        </div>
+                        <div class="movies">
+                            <h5>Teatro de la Scala Milan</h5>
+                            <div>
+                                <h5>DETRÁS DE LOS ESCOMBROS</h5>
+                                <img src="\static\Imagenes\DETRÁS DE LOS ESCOMBROS.jpg" alt>
+                            </div>
+                            <div>
+                                <h5>VASELINA</h5>
+                                <img src="\static\Imagenes\VASELINA.jpg" alt>
+                            </div>
+                            <div>
+                                <h5>THE DRIVER ERA</h5>
+                                <img src="\static\Imagenes\THE DRIVER ERA.jpg" alt>
+                            </div>
+                        </div>
+                        <div class="movies">
+                            <h5>Teatro Metropolitan, Ciudad de Mexico</h5>
+                            <div>
+                                <h5>ROJO EN CONCIERTO</h5>
+                                <img src="\static\Imagenes\ROJO EN CONCIERTO.jpg" alt>
+                            </div>
+                            <div>
+                                <h5>BACILOS</h5>
+                                <img src="\static\Imagenes\bacilos.jpg" alt>
+                            </div>
+                            <div>
+                                <h5>CAROLINA ROSS</h5>
+                                <img src="\static\Imagenes\CAROLINA ROSS.jpg" alt>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container2">
+                    <h1 style="font-size: 30px; margin-bottom: 0px;"
+                        id="Pelicula">Pelicula <p style="font-size: 30px;"
+                            id="TipoSala">Tipo Sala</p></h1>
+                    <ul class="showcase">
+                        <li>
+                            <div class="seat"></div>
+                            <small>Available</small>
+                        </li>
+                        <li>
+                            <div class="seat selected"></div>
+                            <small>Selected</small>
+                        </li>
+                        <li>
+                            <div class="seat sold"></div>
+                            <small>Sold</small>
+                        </li>
+                    </ul>
+                    <div class="container4">
+                        <div class="screen"></div>
+                        <div class="row">
+                            <h4>A</h4>
+                            <button class="seat" id="A1"></button>
+                            <button class="seat" id="A2"></button>
+                            <button class="seat" id="A3"></button>
+                            <button class="seat" id="A4"></button>
+                            <button class="seat" id="A5"></button>
+                            <button class="seat" id="A6"></button>
+                            <button class="seat" id="A7"></button>
+                            <button class="seat" id="A8"></button>
+                        </div>
+                        <div class="row">
+                            <h4>B</h4>
+                            <button class="seat" id="B1"></button>
+                            <button class="seat" id="B2"></button>
+                            <button class="seat" id="B3"></button>
+                            <button class="seat" id="B4"></button>
+                            <button class="seat" id="B5"></button>
+                            <button class="seat" id="B6"></button>
+                            <button class="seat" id="B7"></button>
+                            <button class="seat" id="B8"></button>
+                        </div>
+                        <div class="row">
+                            <h4>C</h4>
+                            <button class="seat" id="C1"></button>
+                            <button class="seat" id="C2"></button>
+                            <button class="seat" id="C3"></button>
+                            <button class="seat" id="C4"></button>
+                            <button class="seat" id="C5"></button>
+                            <button class="seat" id="C6"></button>
+                            <button class="seat" id="C7"></button>
+                            <button class="seat" id="C8"></button>
+                        </div>
+                        <div class="row">
+                            <h4>D</h4>
+                            <button class="seat" id="D1"></button>
+                            <button class="seat" id="D2"></button>
+                            <button class="seat" id="D3"></button>
+                            <button class="seat" id="D4"></button>
+                            <button class="seat" id="D5"></button>
+                            <button class="seat" id="D6"></button>
+                            <button class="seat" id="D7"></button>
+                            <button class="seat" id="D8"></button>
+                        </div>
+                        <div class="row">
+                            <h4>E</h4>
+                            <button class="seat" id="E1"></button>
+                            <button class="seat" id="E2"></button>
+                            <button class="seat" id="E3"></button>
+                            <button class="seat" id="E4"></button>
+                            <button class="seat" id="E5"></button>
+                            <button class="seat" id="E6"></button>
+                            <button class="seat" id="E7"></button>
+                            <button class="seat" id="E8"></button>
+                        </div>
+                        <div class="row">
+                            <h4>F</h4>
+                            <button class="seat" id="F"></button>
+                            <button class="seat" id="F2"></button>
+                            <button class="seat" id="F3"></button>
+                            <button class="seat" id="F4"></button>
+                            <button class="seat" id="F5"></button>
+                            <button class="seat" id="F6"></button>
+                            <button class="seat" id="F7"></button>
+                            <button class="seat" id="F8"></button>
+                        </div>
+                        <div class="row">
+                            <h4>X</h4>
+                            <h6>1</h6>
+                            <h6>2</h6>
+                            <h6>3</h6>
+                            <h6>4</h6>
+                            <h6>5</h6>
+                            <h6>6</h6>
+                            <h6>7</h6>
+                            <h6>8</h6>
+                        </div>
+                    </div>
+
+                    <p class="text">
+                        Haz seleccionado <span id="count">0</span> asientos por
+                        un costo de $<span id="total">0</span> pesos
+                        mexicanos</p>
+                </div>
+            </main>
+            <script type="module"
+                src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule
+                src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            <script src="\static\slider\script.js"></script>
+        </body>
+
+        <script>
+            var peliculasPorCine = {
+                'Cinemark': ['LULI PAMPIN, EL LIBRO MUSICAL.', 'TEMPORADA DE PATOS', 'VEINTIDÓS VEINTIDÓS DE ODIN DUPEYRON'],
+                'Cinepolis': ['DETRÁS DE LOS ESCOMBROS', 'VASELINA', 'THE DRIVER ERA'],
+                'Cinemex': ['ROJO EN CONCIERTO', 'BACILOS', 'CAROLINA ROSS']
+            };
+            function actualizarPeliculas() {
+                var cineSelect = document.getElementById('cine');
+                var peliculaSelect = document.getElementById('pelicula');
+                var cineSeleccionado = cineSelect.value;
+                peliculaSelect.innerHTML = '';
+                var peliculas = peliculasPorCine[cineSeleccionado];
+                peliculas.forEach(function(pelicula) {
+                    var option = document.createElement('option');
+                    option.text = pelicula;
+                    peliculaSelect.add(option);
+                });
+            }
+            document.getElementById('cine').addEventListener('change', actualizarPeliculas);
+            actualizarPeliculas();
+        </script>
+        <script>
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById('fecha').min = today;
+        </script>
+        {% for asiento_id in asientos_ocupados %}
+        <script>
+            document.getElementById('{{ asiento_id }}').classList.add('seat', 'sold');
+        </script>
+        {% endfor %}
+    </html>

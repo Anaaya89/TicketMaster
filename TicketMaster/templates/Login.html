@@ -1,0 +1,52 @@
+<html lang="ES">
+
+    <head>
+        <link rel="shortcut icon" href="Imagenes/TicketCenterN.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="static\style.css">
+        <title>Inicio de Sesion</title>
+    </head>
+    <body>
+        
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form action="/Login" method="POST" onsubmit="return validarRegistro()">
+                    <img src="static\Imagenes/TicketCenterN.png" alt=""/>
+                    <h1>Crea una cuenta</h1>
+                    <input type="text" placeholder="Nombre" id="nombre" name="nombre" required>
+                    <input type="email" placeholder="Email" id="correo" name="correo" required>
+                    <input type="password" placeholder="Contraseña" id="psw" name="psw" required>
+                    <button type="submit" name="register_button">Registrarse</button>
+                </form>
+            </div>
+            <div class="form-container sign-in">
+                <form action="/Login" method="POST">
+                    <img src="static\Imagenes/TicketCenterN.png" alt=""/>
+                    <h1>Iniciar Sesion</h1>
+                    <input type="email" placeholder="Email" id="Inombre" name="Inombre" required>
+                    <input type="password" placeholder="Contraseña" id="Ipsw" name="Ipsw" required>
+                    <button type="submit" name="login_button">Inicia Sesion</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Bienvenido de vuelta!</h1>
+                        <p>¿Ya tienes cuenta? Inicia Sesion!</p>
+                        <button class="hidden" id="login">Iniciar Sesion</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1> Hola!</h1>
+                        <p>¿No tienes cuenta? Registrate!</p>
+                        <button class="hidden" id="register">Registrate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="static\script.js"></script>
+        <script src="static\Validaciones.js"></script>
+    </body>
+</html>
